@@ -688,24 +688,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maril\\.nuget\\packages\\": {},
+    "C:\\Users\\joshu\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
+      "projectUniqueName": "C:\\Users\\joshu\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
       "projectName": "PointOfSaleTerminal_TeamSugarRayFanClub",
-      "projectPath": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
-      "packagesPath": "C:\\Users\\maril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\obj\\",
+      "projectPath": "C:\\Users\\joshu\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
+      "packagesPath": "C:\\Users\\joshu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joshu\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\maril\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\joshu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
