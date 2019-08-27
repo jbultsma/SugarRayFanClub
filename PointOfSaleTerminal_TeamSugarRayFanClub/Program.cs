@@ -8,6 +8,12 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         {
             Console.WriteLine("Team Sugar Ray Fanclub!");
             Console.WriteLine("This is a test commit");
+
+
+
+
+
+            Console.WriteLine("Maricela commit.");
         }
     }
 }
