@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
@@ -6,7 +7,18 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Team Sugar Ray Fanclub!");
+            Console.WriteLine("The Sugar Ray Fanclub!");
+
+            Console.WriteLine("\n...\n");
+            Thread.Sleep(300);
+
+            Run();
+            
+        }
+
+        public static void Run()
+        {
+            MenuClass menuClass = new MenuClass();
         }
     }
 }
