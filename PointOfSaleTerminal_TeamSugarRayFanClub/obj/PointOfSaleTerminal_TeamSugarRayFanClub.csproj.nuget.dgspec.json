@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sam\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj": {}
+    "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sam\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj": {
+    "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sam\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
+        "projectUniqueName": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
         "projectName": "PointOfSaleTerminal_TeamSugarRayFanClub",
-        "projectPath": "C:\\Users\\Sam\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
-        "packagesPath": "C:\\Users\\Sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sam\\source\\repos\\SugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\obj\\",
+        "projectPath": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub.csproj",
+        "packagesPath": "C:\\Users\\maril\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maril\\source\\repos\\PointOfSaleTerminal_TeamSugarRayFanClub\\PointOfSaleTerminal_TeamSugarRayFanClub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\maril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

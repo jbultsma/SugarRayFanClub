@@ -9,6 +9,11 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         public double subTotal { get; set; }
         public double tax { get; }
         public double grandTotal { get; }
+
+        public Total()
+        {
+
+        }
         public Total(double subtotal)
         {
             this.subTotal = subtotal;
