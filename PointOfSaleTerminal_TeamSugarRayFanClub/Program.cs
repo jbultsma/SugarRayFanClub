@@ -13,7 +13,9 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Thread.Sleep(300);
 
             Run();
-            
+
+
+
         }
 
         public static void Run()
