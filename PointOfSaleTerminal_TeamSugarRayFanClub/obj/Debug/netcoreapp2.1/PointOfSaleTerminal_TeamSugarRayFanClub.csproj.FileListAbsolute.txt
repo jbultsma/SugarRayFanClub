@@ -9,3 +9,14 @@ C:\Users\joshu\source\repos\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanC
 C:\Users\joshu\source\repos\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.AssemblyInfo.cs
 C:\Users\joshu\source\repos\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.dll
 C:\Users\joshu\source\repos\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.pdb
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\bin\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.deps.json
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\bin\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.runtimeconfig.json
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\bin\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.runtimeconfig.dev.json
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\bin\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.dll
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\bin\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.pdb
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.csprojAssemblyReference.cache
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.csproj.CoreCompileInputs.cache
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.AssemblyInfoInputs.cache
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.AssemblyInfo.cs
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.dll
+C:\Dev\Grand Circus\Midterm Capstone\SugarRayFanClub\PointOfSaleTerminal_TeamSugarRayFanClub\obj\Debug\netcoreapp2.1\PointOfSaleTerminal_TeamSugarRayFanClub.pdb
