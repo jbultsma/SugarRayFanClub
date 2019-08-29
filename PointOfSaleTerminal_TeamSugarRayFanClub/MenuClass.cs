@@ -16,7 +16,15 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             {
                 DisplayItems();
                 PurchaseItems();
-                PrintReceipt();
+                Console.WriteLine("Would you like to buy another item? (y/n)" );
+                string input = Console.ReadLine();
+
+                if (input == "y")
+                {
+                    isBuyAgain = true;
+                }
+
+                else { isBuyAgain = false; }
             }
             while (isBuyAgain == true);
         }
