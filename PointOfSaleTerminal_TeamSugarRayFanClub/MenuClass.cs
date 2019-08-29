@@ -6,7 +6,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
     class MenuClass
     {
-        static void MainMenu()
+        public void MainMenu()
         {
             bool isBuyAgain = false;
             Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
@@ -29,19 +29,19 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             while (isBuyAgain == true);
         }
 
-        static void DisplayItems()
+        public void DisplayItems()
         {
             Database database = new Database();
             Console.WriteLine("DisplayItems");
 
         }
 
-        static void PurchaseItems()
+        public void PurchaseItems()
         {
             Console.WriteLine("PurchaseItems");
         }
 
-        static void PrintReceipt()
+        public void PrintReceipt()
         {
             Console.WriteLine("PrintReceipt");
         }
