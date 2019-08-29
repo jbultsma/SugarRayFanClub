@@ -17,10 +17,10 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         }
 
         /*
-         * 
-         * wasn't sure if I should build seperate models for tax and grandtotal or if it was better to put them in the constructor.
+         * s for tax and grandtotal or if it was better to put them in the constructor.
          * 
         public double GetTax()
+         * wasn't sure if I should build seperate model
         {
             return subTotal * taxPercent;
         }
