@@ -8,6 +8,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
     {
         
         public List<Product> Products = new List<Product>();
+
         Product GreatestHits = new Product("Greatest Hits", "Vinyl", "The best of Sugar Ray on one album!!!", 35);
         Product Vinyl1 = new Product("Floored", "Vinyl", "Sugar Ray's hit release from 1997", 30);
         Product Vinyl2 = new Product("Lemonade and Brownies", "Vinyl", "Sugar Ray's release from 1995", 30);
@@ -17,10 +18,16 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         Product Tshirt1 = new Product("T-Shirt", "Merchandise", "Collectable T-Shirt that will probably be worth and exponential amount in a decade.", 12);
         Product Tshirt2 = new Product("T-Shirt", "Merchandise", "A less desirable design of T-Shirt. Won't be worth anything in a few years", 12);
         
-        public Database(List() p)
+        public Database()
         {
-
-        Products.Add(Vinyl1);
+            Products.Add(GreatestHits);
+            Products.Add(Vinyl1);
+            Products.Add(Vinyl2);
+            Products.Add(Vinyl3);
+            Products.Add(Dvd);
+            Products.Add(HairGel);
+            Products.Add(Tshirt1);
+            Products.Add(Tshirt2);
         }
     }
 }
