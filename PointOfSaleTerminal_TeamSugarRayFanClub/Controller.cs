@@ -26,7 +26,6 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             }
             else if (input == 3)
             {
-                
                 pv.DisplayCreditCard();
             }
         }
