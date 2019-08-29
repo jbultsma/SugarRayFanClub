@@ -12,7 +12,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
 
             Console.WriteLine("Joshua");
-
+            Console.WriteLine("Sammy Boi commit");
             Console.WriteLine("Maricela commit.");
         }
     }
