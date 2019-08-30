@@ -6,32 +6,44 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
     class MenuClass
     {
-        static void MainMenu()
+        public void MainMenu()
         {
             bool isBuyAgain = false;
-
+            Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
+            Console.WriteLine("Here you can buy all things Sugar Ray");
+            Console.WriteLine("It's pretty cool");
             do
             {
                 DisplayItems();
                 PurchaseItems();
-                PrintReceipt();
+                Console.WriteLine("Would you like to buy another item? (y/n)" );
+                string input = Console.ReadLine();
+
+                if (input == "y")
+                {
+                    isBuyAgain = true;
+                }
+
+                else { isBuyAgain = false; }
             }
             while (isBuyAgain == true);
         }
 
-        static void DisplayItems()
+        public void DisplayItems()
         {
+            Database database = new Database();
+            Console.WriteLine("DisplayItems");
 
         }
 
-        static void PurchaseItems()
+        public void PurchaseItems()
         {
-
+            Console.WriteLine("PurchaseItems");
         }
 
-        static void PrintReceipt()
+        public void PrintReceipt()
         {
-
+            Console.WriteLine("PrintReceipt");
         }
        
     }
