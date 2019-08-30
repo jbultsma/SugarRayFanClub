@@ -37,5 +37,15 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Products.Add(SunGlasses);
             Products.Add(SunScreen);
         }
+        public void GetList()
+        {
+            foreach (Product p in Products)
+            {
+                int i = 1;
+                Console.WriteLine(i + " ");
+                Console.Write(p.ToString());
+                Console.WriteLine();
+            }
+        }
     }
 }
