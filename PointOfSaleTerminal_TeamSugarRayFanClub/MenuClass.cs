@@ -17,7 +17,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
                 DisplayItems();
                 PurchaseItems();
                 Console.WriteLine("Would you like to buy another item? (y/n)" );
-                string input = Console.ReadLine();
+                string input = Console.ReadLine().ToLower().Trim();
 
                 if (input == "y")
                 {
@@ -31,9 +31,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public void DisplayItems()
         {
-            Database database = new Database();
-            Console.WriteLine("DisplayItems");
-
+            Database database = new Database();            
         }
 
         public void PurchaseItems()
@@ -43,7 +41,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public void PrintReceipt()
         {
-            Console.WriteLine("PrintReceipt");
+            Controller c = new Controller();
+            c.PaymentMenu();
         }
        
     }
