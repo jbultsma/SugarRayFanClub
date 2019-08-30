@@ -6,6 +6,6 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
     class ViewTotal
     {
-        Console.WriteLine("Subtotal: " + );
+
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
-    class Controller
+    class Receipt
     {
         // Create PaymentMenu()
         public void PaymentMenu()
