@@ -32,6 +32,10 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Products.Add(HairGel);
             Products.Add(Tshirt1);
             Products.Add(Tshirt2);
+            Products.Add(LongSleeve);
+            Products.Add(Mug);
+            Products.Add(SunGlasses);
+            Products.Add(SunScreen);
         }
     }
 }
