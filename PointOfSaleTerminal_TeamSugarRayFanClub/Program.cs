@@ -7,7 +7,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Team Sugar Ray Fanclub!");
         }
     }
 }
