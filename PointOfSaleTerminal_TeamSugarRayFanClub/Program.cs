@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
@@ -7,7 +8,6 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         static void Main(string[] args)
         {
             Console.WriteLine("Team Sugar Ray Fanclub!");
-            //next create ViewTotal.cs file
         }
     }
 }
