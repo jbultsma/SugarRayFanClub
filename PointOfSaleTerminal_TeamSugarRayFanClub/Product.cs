@@ -22,7 +22,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public override string ToString()
         {
-            return (this.Name + "\t\t" + this.Catagory + "\t\t" + this.Description + "\t\t" + this.Price.ToString("C2", CultureInfo.CurrentCulture));
+            return (this.Name + "\t\t\t\t" + this.Catagory); //+ "\t\t" + this.Description + "\t\t" + this.Price.ToString("C2", CultureInfo.CurrentCulture));
         }
     }
 }
