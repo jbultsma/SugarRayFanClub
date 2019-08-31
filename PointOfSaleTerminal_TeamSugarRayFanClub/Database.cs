@@ -39,13 +39,14 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         }
         public void GetList()
         {
-            int i = 1;
-            foreach (Product p in Products)
             {
-                Console.Write(i + ") ");
-                Console.WriteLine(p.Name + "\t" + "$" + p.Price);
-                Console.WriteLine();
-                i++;
+                int i = 1;
+                for (int j = 0; j < Products.Count; j++)
+                {
+                    Console.WriteLine(j + 1 + ") " + Products[j].Name + "\t" + Products[j].Price);
+                    Console.WriteLine();
+                    i++;
+                }
             }
         }
     }
