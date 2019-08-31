@@ -32,7 +32,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         public void DisplayItems()
         {
             Database database = new Database();
-            Console.WriteLine("DisplayItems");
+            database.GetList();
         }
 
         public void PurchaseItems()
