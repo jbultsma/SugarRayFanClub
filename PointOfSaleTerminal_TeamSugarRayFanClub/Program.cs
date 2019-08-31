@@ -8,6 +8,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         static void Main(string[] args)
         {
 
+            
             MenuClass menuClass = new MenuClass();
 
             menuClass.MainMenu();

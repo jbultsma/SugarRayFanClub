@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
@@ -18,6 +19,11 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             this.Catagory = catagory;
             this.Description = description;
             this.Price = price;
+        }
+
+        public override string ToString()
+        {
+            return (this.Name + "\t\t\t\t" + this.Catagory); //+ "\t\t" + this.Description + "\t\t" + this.Price.ToString("C2", CultureInfo.CurrentCulture));
         }
     }
 }

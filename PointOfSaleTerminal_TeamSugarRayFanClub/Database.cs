@@ -39,15 +39,21 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         }
         public void GetList()
         {
+            int i = 1;
+            for (int j = 0; j < Products.Count; j++)
             {
-                int i = 1;
-                for (int j = 0; j < Products.Count; j++)
-                {
-                    Console.WriteLine(j + 1 + ") " + Products[j].Name + "\t" + Products[j].Price);
-                    Console.WriteLine();
-                    i++;
-                }
+                Console.WriteLine(j + 1 + ") " + Products[j].Name + "\t" + Products[j].Price);
+                Console.WriteLine();
+                i++;
             }
+        }
+
+        public void AddToCart()
+        {
+            Console.WriteLine("Which item would you like to purchase? \n Please select the corresponding number associated with that item. (1-12)");
+            string input = Console.ReadLine();
+            
+
         }
     }
 }

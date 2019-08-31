@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
@@ -10,14 +11,21 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         {
             bool isBuyAgain = false;
             Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
+            //Console.Write("."); Thread.Sleep(1000); Console.Write("."); Thread.Sleep(1000); Console.WriteLine(".");
             Console.WriteLine("Here you can buy all things Sugar Ray");
+            //Console.Write("."); Thread.Sleep(1000); Console.Write("."); Thread.Sleep(1000); Console.WriteLine(".");
             Console.WriteLine("It's pretty cool");
+            //Console.Write("."); Thread.Sleep(1000); Console.Write("."); Thread.Sleep(1000); Console.WriteLine(".");
+            Console.WriteLine("Below you can find a list of things to pay to fill all of your Sugar Ray needs!");
+            //Console.Write("."); Thread.Sleep(1000); Console.Write("."); Thread.Sleep(1000); Console.WriteLine(".\n");
+            Console.WriteLine();
+
             do
             {
                 DisplayItems();
-                PurchaseItems();
+                AddToCart();
                 Console.WriteLine("Would you like to buy another item? (y/n)" );
-                string input = Console.ReadLine();
+                string input = Console.ReadLine().ToLower().Trim();
 
                 if (input == "y")
                 {
@@ -35,14 +43,16 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             database.GetList();
         }
 
-        public void PurchaseItems()
+        public void AddToCart()
         {
+            Database d = new Database();
             Console.WriteLine("PurchaseItems");
         }
 
         public void PrintReceipt()
         {
-            Console.WriteLine("PrintReceipt");
+            Receipt c = new Receipt();
+            c.PaymentMenu();
         }
        
     }
