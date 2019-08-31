@@ -29,21 +29,22 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Products.Add(Vinyl3);
             Products.Add(Vinyl4);
             Products.Add(Dvd);
-            Products.Add(HairGel);
             Products.Add(Tshirt1);
             Products.Add(Tshirt2);
             Products.Add(LongSleeve);
             Products.Add(Mug);
+            Products.Add(HairGel);
             Products.Add(SunGlasses);
             Products.Add(SunScreen);
         }
         public void GetList()
         {
+            int i = 1;
             for (int j = 0; j < Products.Count; j++)
             {
-                int i = 1;
-                Console.WriteLine(j + 1 + "). " + Products[j].ToString());
+                Console.WriteLine(j + 1 + ") " + Products[j].Name + "\t" + Products[j].Price);
                 Console.WriteLine();
+                i++;
             }
         }
 

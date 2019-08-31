@@ -11,6 +11,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         public string Catagory { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
+        public double Quantity { get; set; }
 
         public Product(string name, string catagory, string description, double price)
         {
