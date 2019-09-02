@@ -6,7 +6,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
     class Database
     {
-        
+        public List<Product> Cart = new List<Product>();
+        public List<Product> History = new List<Product>();
         public List<Product> Products = new List<Product>();
 
         Product Vinyl1 = new Product("Floored", "Vinyl", "Sugar Ray's hit release from 1997", 30);
@@ -48,12 +49,29 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             }
         }
 
-        public void AddToCart()
+        public void AddToCart(int i)
         {
-            Console.WriteLine("Which item would you like to purchase? \n Please select the corresponding number associated with that item. (1-12)");
-            string input = Console.ReadLine();
-            
+            // note, i will be the answer for Console.ReadLine() "What would you like to buy"?
+            i--;
+            Cart.Add(Products[i]);
+            int dex = Cart.IndexOf(Products[i]);
 
+            // The next three lines add to the Quantity property.
+            Console.WriteLine("How many would you like?");
+            int q = int.Parse(Console.ReadLine());
+            Cart[dex].Quantity = q;
+        }
+
+        // This method is used to move Cart to history after transaction.
+        public void MoveToHistory()
+        {
+            int i = 0;
+            foreach(Product p in Cart)
+            {
+                History.Add(Cart[i]);
+                Cart.Remove(p);
+                i++;
+            }
         }
     }
 }
