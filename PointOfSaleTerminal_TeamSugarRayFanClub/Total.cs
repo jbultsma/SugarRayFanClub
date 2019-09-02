@@ -7,25 +7,22 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
     class Total
     {
         public double subTotal { get; set; }
-        public double tax { get; }
-        public double grandTotal { get; }
-
+        public double tax { get; set;  }
+        public double grandTotal { get; set; }
         public Total()
         {
+            //this.subtotal = subtotal;
+            //this.tax = subtotal * .06;
+            //this.grandtotal = tax + subtotal;
         }
-        public Total(double subtotal)
+        public void SetTotal(List<Product> x)
         {
-            this.subTotal = subtotal;
-            this.tax = subTotal * .06;
-            this.grandTotal = tax + subTotal;
-        }
-        public void GetSubTotal(List<Product> prada)
-        {
-            // ENTER PROPER LIST OBJECT FROM CONSTRUCTOR LATER ON
-            foreach(Product p in prada)
+            foreach(Product p in x)
             {
                 subTotal = subTotal + (p.Price * p.Quantity);
             }
+            tax = subTotal * .06;
+            grandTotal = tax + subTotal;
         }
     }
 }
