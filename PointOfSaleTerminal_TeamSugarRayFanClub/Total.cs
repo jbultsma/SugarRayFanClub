@@ -12,7 +12,6 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public Total()
         {
-
         }
         public Total(double subtotal)
         {
@@ -20,19 +19,13 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             this.tax = subTotal * .06;
             this.grandTotal = tax + subTotal;
         }
-
-        /*
-         * s for tax and grandtotal or if it was better to put them in the constructor.
-         * 
-        public double GetTax()
-         * wasn't sure if I should build seperate model
+        public void GetSubTotal(List<Product> prada)
         {
-            return subTotal * taxPercent;
+            // ENTER PROPER LIST OBJECT FROM CONSTRUCTOR LATER ON
+            foreach(Product p in prada)
+            {
+                subTotal = subTotal + (p.Price * p.Quantity);
+            }
         }
-        public double GetGrandTotal()
-        {
-            return GetTax() + subTotal;
-        }
-        */
     }
 }
