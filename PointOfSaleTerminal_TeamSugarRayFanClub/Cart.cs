@@ -10,15 +10,9 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         {
             // This class is going to store two lists. One for the present items in the cart and one for the past purchases.
         }
-
-        public double GetSubTotal()
-        {
-        }
-
-        public void DisplayCartHistory()
-        {
-            
-            foreach(Product p in Database.History)
+        public void DisplayCartHistory(List<Product> hist)
+        {           
+            foreach(Product p in hist)
             {
                 Console.WriteLine(p.Name);
                 Console.WriteLine(p.Quantity);
