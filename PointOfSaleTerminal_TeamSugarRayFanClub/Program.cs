@@ -9,10 +9,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         {
             Database Data = new Database();
             MenuClass Menu = new MenuClass();
-            Menu.MainMenu();
+            Menu.MainMenu(Data);
 
-
-            menuClass.MainMenu();
 
             //Receipt r = new Receipt();
             //r.PaymentMenu();
