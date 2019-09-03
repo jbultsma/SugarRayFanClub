@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 using System.Threading;
 
 namespace PointOfSaleTerminal_TeamSugarRayFanClub
@@ -44,8 +44,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             int i = 1;
             for (int j = 0; j < Data.Products.Count; j++)
             {
-                Console.WriteLine(j + 1 + ") " + Data.Products[j].Name + "\t" + Data.Products[j].Price);
-                Console.WriteLine();
+                Console.WriteLine(j + 1 + ") " + Data.Products[j].Name.PadRight(25) + "\t" + Data.Products[j].Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10)); // Added dollar sign and formatting to clean it up -Mari
+                //Console.WriteLine(); // I think the menu looks better without this extra blank line -Mari
                 i++;
             }
         }
@@ -54,12 +54,18 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Console.WriteLine("What would you like to buy? (enter 1 - 12)");
             int i = int.Parse(Console.ReadLine());
             i--;
-            Console.WriteLine("You would like " + Data.Products[i].Name + "? (Yes or No)");
+
+            Console.WriteLine("Name: " + Data.Products[i].Name);
+            Console.WriteLine("Category: " + Data.Products[i].Category);
+            Console.WriteLine("Description: " + Data.Products[i].Description);
+            Console.WriteLine("Price: " + Data.Products[i].Price.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine();
+            Console.WriteLine("You would like " + Data.Products[i].Name + "? (y/n)");
 
             while (true)
             {
               string answer = Console.ReadLine().Trim().ToLower();
-                if (answer == "yes")
+                if (answer == "y")
                 {
                     Data.Cart.Add(Data.Products[i]);
                     int dex = Data.Cart.IndexOf(Data.Products[i]);
@@ -69,14 +75,14 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
                     Data.Cart[dex].Quantity = q;
                     break;
                 }
-                else if (answer == "no")
+                else if (answer == "n")
                 {
                     AddToCart(Data);
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("I'm sorry I didn't understand that. Please answer again. (Yes or No)");
+                    Console.WriteLine("I'm sorry I didn't understand that. Please answer again. (y/n)");
                 }
             }
         }
