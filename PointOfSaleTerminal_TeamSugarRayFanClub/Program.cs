@@ -10,6 +10,9 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             MenuClass menuClass = new MenuClass();
 
             menuClass.MainMenu();
+
+            //Receipt r = new Receipt();
+            //r.PaymentMenu();
         }
     }
 }
