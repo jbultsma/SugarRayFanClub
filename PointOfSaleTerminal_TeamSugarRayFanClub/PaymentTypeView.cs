@@ -36,16 +36,15 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Console.WriteLine("Please enter a credit card number.");
             string creditCardNum = Console.ReadLine();
             Console.WriteLine("Enter credit card expiration month (MM).");
-            int expiryMonth = int.Parse(Console.ReadLine());
+            string expiryMonth = Console.ReadLine();
             Console.WriteLine("Enter credit card expiration year (YYYY).");
-            int expiryYear = int.Parse(Console.ReadLine());
+            string expiryYear = Console.ReadLine();
             Console.WriteLine("Enter credit card security code (CVV).");
             int creditCardCVV = int.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(creditCardNum, expiryMonth, expiryYear, creditCardCVV);
             Console.WriteLine("Payment Type: Credit Card");
             Console.WriteLine("Credit Card Number: " + pt.CreditCardNum);
-            Console.WriteLine("Credit Card Expiration Month: " + pt.ExpiryMonth);
-            Console.WriteLine("Credit Card Expiration Year: " + pt.ExpiryYear);
+            Console.WriteLine("Credit Card Expiration Month/Year: " + pt.ExpiryMonth + "/" + pt.ExpiryYear);
             Console.WriteLine("Credit Card CVV: " + pt.CreditCardCVV);
             Console.WriteLine("Amount Tendered: " + T.grandTotal);
         }

@@ -47,6 +47,10 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         {
             Database d = new Database();
             Console.WriteLine("PurchaseItems");
+            //Adding test code -Mari
+            Console.WriteLine("What item would you like to purchase?");
+            int purchaseInput = int.Parse(Console.ReadLine());
+            d.AddToCart(purchaseInput - 1);
         }
 
         public void PrintReceipt()
