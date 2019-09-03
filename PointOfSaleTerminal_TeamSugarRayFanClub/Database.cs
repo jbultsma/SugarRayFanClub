@@ -52,15 +52,12 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public void AddToCart(int i)
         {
-            // note, i will be the answer for Console.ReadLine() "What would you like to buy"?
-            //i--;
-            Cart.Add(Products[i]);
-            int dex = Cart.IndexOf(Products[i]);
-
-            // The next three lines add to the Quantity property.
-            Console.WriteLine("How many would you like?");
-            int q = int.Parse(Console.ReadLine());
-            Cart[dex].Quantity = q;
+            Database d = new Database();
+            Console.WriteLine("PurchaseItems");
+            //Adding test code -Mari
+            Console.WriteLine("What item would you like to purchase?");
+            int purchaseInput = int.Parse(Console.ReadLine());
+            d.AddToCart(purchaseInput - 1);
         }
 
         public void PrintCart()
