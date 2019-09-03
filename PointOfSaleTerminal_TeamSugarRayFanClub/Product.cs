@@ -11,6 +11,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         public string Catagory { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
+        public double Quantity { get; set; }
 
         public Product(string name, string catagory, string description, double price)
         {
@@ -22,7 +23,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         public override string ToString()
         {
-            return (this.Name + "\t\t" + this.Catagory + "\t\t" + this.Description + "\t\t" + this.Price.ToString("C2", CultureInfo.CurrentCulture));
+            return (this.Name + "\t\t\t\t" + this.Catagory); //+ "\t\t" + this.Description + "\t\t" + this.Price.ToString("C2", CultureInfo.CurrentCulture));
         }
     }
 }

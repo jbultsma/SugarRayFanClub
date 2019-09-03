@@ -6,7 +6,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 {
     class Database
     {
-        
+        public List<Product> Cart = new List<Product>();
+        public List<Product> History = new List<Product>();
         public List<Product> Products = new List<Product>();
 
         Product Vinyl1 = new Product("Floored", "Vinyl", "Sugar Ray's hit release from 1997", 30);
@@ -29,22 +30,47 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Products.Add(Vinyl3);
             Products.Add(Vinyl4);
             Products.Add(Dvd);
-            Products.Add(HairGel);
             Products.Add(Tshirt1);
             Products.Add(Tshirt2);
             Products.Add(LongSleeve);
             Products.Add(Mug);
+            Products.Add(HairGel);
             Products.Add(SunGlasses);
             Products.Add(SunScreen);
         }
         public void GetList()
         {
-            foreach (Product p in Products)
+            int i = 1;
+            for (int j = 0; j < Products.Count; j++)
             {
-                int i = 1;
-                Console.WriteLine(i + " ");
-                Console.Write(p.ToString());
+                Console.WriteLine(j + 1 + ") " + Products[j].Name + "\t" + Products[j].Price);
                 Console.WriteLine();
+                i++;
+            }
+        }
+
+        public void AddToCart(int i)
+        {
+            // note, i will be the answer for Console.ReadLine() "What would you like to buy"?
+            i--;
+            Cart.Add(Products[i]);
+            int dex = Cart.IndexOf(Products[i]);
+
+            // The next three lines add to the Quantity property.
+            Console.WriteLine("How many would you like?");
+            int q = int.Parse(Console.ReadLine());
+            Cart[dex].Quantity = q;
+        }
+
+        // This method is used to move Cart to history after transaction.
+        public void MoveToHistory()
+        {
+            int i = 0;
+            foreach(Product p in Cart)
+            {
+                History.Add(Cart[i]);
+                Cart.Remove(p);
+                i++;
             }
         }
     }
