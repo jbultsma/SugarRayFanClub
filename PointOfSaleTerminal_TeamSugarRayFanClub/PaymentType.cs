@@ -10,8 +10,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
         public double CashValue { get; set; }
         public int CheckNumber { get; set; }
         public string CreditCardNum { get; set; }
-        public int ExpiryMonth { get; set; }
-        public int ExpiryYear { get; set; }
+        public string ExpiryMonth { get; set; }
+        public string ExpiryYear { get; set; }
         public int CreditCardCVV { get; set; }
 
         public PaymentType()
@@ -34,7 +34,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
 
         // Overload 3 for credit card payment
 
-        public PaymentType(string creditCardNum, int expiryMonth, int expiryYear, int creditCardCVV)
+        public PaymentType(string creditCardNum, string expiryMonth, string expiryYear, int creditCardCVV)
         {
             this.CreditCardNum = creditCardNum;
             this.ExpiryMonth = expiryMonth;
