@@ -39,28 +39,27 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Products.Add(SunGlasses);
             Products.Add(SunScreen);
         }
-        public void GetList()
-        {
-            int i = 1;
-            for (int j = 0; j < Products.Count; j++)
-            {
-                Console.WriteLine(j + 1 + ") " + Products[j].Name.PadRight(25) + "\t" + Products[j].Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10)); // Added dollar sign and formatting to clean it up -Mari
-                //Console.WriteLine(); // I think the menu looks better without this extra blank line -Mari
-                i++;
-            }
-        }
+        // This method exists as DisplayItems() in MenuClass.cs -Sam
+
+        //public void GetList()
+        //{
+        //    int i = 1;
+        //    for (int j = 0; j < Products.Count; j++)
+        //    {
+        //        Console.WriteLine(j + 1 + ") " + Products[j].Name.PadRight(25) + "\t" + Products[j].Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10)); // Added dollar sign and formatting to clean it up -Mari
+        //        //Console.WriteLine(); // I think the menu looks better without this extra blank line -Mari
+        //        i++;
+        //    }
+        //}
 
         public void AddToCart(int i)
         {
-            // note, i will be the answer for Console.ReadLine() "What would you like to buy"?
-            //i--;
-            Cart.Add(Products[i]);
-            int dex = Cart.IndexOf(Products[i]);
-
-            // The next three lines add to the Quantity property.
-            Console.WriteLine("How many would you like?");
-            int q = int.Parse(Console.ReadLine());
-            Cart[dex].Quantity = q;
+            Database d = new Database();
+            Console.WriteLine("PurchaseItems");
+            //Adding test code -Mari
+            Console.WriteLine("What item would you like to purchase?");
+            int purchaseInput = int.Parse(Console.ReadLine());
+            d.AddToCart(purchaseInput - 1);
         }
 
         public void PrintCart()

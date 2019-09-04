@@ -24,5 +24,11 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             tax = subTotal * .06;
             grandTotal = tax + subTotal;
         }
+        public void DisplayTotal(Total t)
+        {
+            Console.WriteLine("Subtotal: " + t.subTotal);
+            Console.WriteLine("Tax: " + t.tax);
+            Console.WriteLine("Grand Total: " + t.grandTotal);
+        }
     }
 }
