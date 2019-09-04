@@ -2,33 +2,31 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PointOfSaleTerminal_TeamSugarRayFanClub
+namespace PoSMidterm
 {
     class Total
     {
-        public double subTotal { get; set; }
-        public double tax { get; set;  }
-        public double grandTotal { get; set; }
+        public double SubTotal { get; set; }
+        public double Tax { get; set; }
+        public double GrandTotal { get; set; }
         public Total()
         {
-            //this.subtotal = subtotal;
-            //this.tax = subtotal * .06;
-            //this.grandtotal = tax + subtotal;
+
         }
         public void SetTotal(List<Product> x)
         {
-            foreach(Product p in x)
+            foreach (Product p in x)
             {
-                subTotal = subTotal + (p.Price * p.Quantity);
+                SubTotal += (p.Price * p.Quantity);
             }
-            tax = subTotal * .06;
-            grandTotal = tax + subTotal;
+            Tax = SubTotal * .06;
+            GrandTotal = Tax + SubTotal;
         }
         public void DisplayTotal(Total t)
         {
-            Console.WriteLine("Subtotal: " + t.subTotal);
-            Console.WriteLine("Tax: " + t.tax);
-            Console.WriteLine("Grand Total: " + t.grandTotal);
+            Console.WriteLine("Subtotal: " + t.SubTotal);
+            Console.WriteLine("Tax: " + t.Tax);
+            Console.WriteLine("Grand Total: " + t.GrandTotal);
         }
     }
 }

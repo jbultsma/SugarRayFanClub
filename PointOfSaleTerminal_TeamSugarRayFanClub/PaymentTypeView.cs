@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PointOfSaleTerminal_TeamSugarRayFanClub
+namespace PoSMidterm
 {
     class PaymentTypeView
     {
         // Create instance of Payment Type to access properties & an instance of Total to access properties
-        //public PaymentType Pt = new PaymentType(67.00);
         public Total T = new Total();
 
         // Create a display method for each payment type
@@ -18,7 +17,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             PaymentType pt = new PaymentType(cashValue);
             Console.WriteLine("Payment Type: Cash");
             Console.WriteLine("Cash Value Tendered: " + pt.CashValue);
-            Console.WriteLine("Change: " + (pt.CashValue - T.grandTotal));
+            Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal));
         }
 
         public void DisplayCheck()
@@ -28,7 +27,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             PaymentType pt = new PaymentType(checkNumber);
             Console.WriteLine("Payment Type: Check");
             Console.WriteLine("Check number: " + pt.CheckNumber);
-            Console.WriteLine("Amount Tendered: " + T.grandTotal);
+            Console.WriteLine("Amount Tendered: " + T.GrandTotal);
         }
 
         public void DisplayCreditCard()
@@ -46,7 +45,7 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
             Console.WriteLine("Credit Card Number: " + pt.CreditCardNum);
             Console.WriteLine("Credit Card Expiration Month/Year: " + pt.ExpiryMonth + "/" + pt.ExpiryYear);
             Console.WriteLine("Credit Card CVV: " + pt.CreditCardCVV);
-            Console.WriteLine("Amount Tendered: " + T.grandTotal);
+            Console.WriteLine("Amount Tendered: " + T.GrandTotal);
         }
     }
 }
