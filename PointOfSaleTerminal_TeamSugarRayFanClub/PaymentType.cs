@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PointOfSaleTerminal_TeamSugarRayFanClub
+namespace PoSMidterm
 {
     class PaymentType
     {
