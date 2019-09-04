@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PointOfSaleTerminal_TeamSugarRayFanClub
+namespace PoSMidterm
 {
     class Receipt
     {
         Total t = new Total();
-
-        //public void PrintTotals() need parameter to use
-        //{
-        //    t.SetTotal();
-        //}
         public void PaymentMenu()
         {
             Console.WriteLine("Select your payment type: ");
