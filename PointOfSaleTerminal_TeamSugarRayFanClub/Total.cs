@@ -7,32 +7,28 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
     class Total
     {
         public double subTotal { get; set; }
-        public double tax { get; }
-        public double grandTotal { get; }
-
+        public double tax { get; set;  }
+        public double grandTotal { get; set; }
         public Total()
         {
-
+            //this.subtotal = subtotal;
+            //this.tax = subtotal * .06;
+            //this.grandtotal = tax + subtotal;
         }
-        public Total(double subtotal)
+        public void SetTotal(List<Product> x)
         {
-            this.subTotal = subtotal;
-            this.tax = subTotal * .06;
-            this.grandTotal = tax + subTotal;
+            foreach(Product p in x)
+            {
+                subTotal = subTotal + (p.Price * p.Quantity);
+            }
+            tax = subTotal * .06;
+            grandTotal = tax + subTotal;
         }
-
-        /*
-         * s for tax and grandtotal or if it was better to put them in the constructor.
-         * 
-        public double GetTax()
-         * wasn't sure if I should build seperate model
+        public void DisplayTotal(Total t)
         {
-            return subTotal * taxPercent;
+            Console.WriteLine("Subtotal: " + t.subTotal);
+            Console.WriteLine("Tax: " + t.tax);
+            Console.WriteLine("Grand Total: " + t.grandTotal);
         }
-        public double GetGrandTotal()
-        {
-            return GetTax() + subTotal;
-        }
-        */
     }
 }
