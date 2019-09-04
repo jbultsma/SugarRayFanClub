@@ -37,6 +37,8 @@ namespace PointOfSaleTerminal_TeamSugarRayFanClub
                 }
             }
             while (isBuyAgain == true);
+
+            PrintReceipt();
         }
 
         public void DisplayItems(Database Data)
