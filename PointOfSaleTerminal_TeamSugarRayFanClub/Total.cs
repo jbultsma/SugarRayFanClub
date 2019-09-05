@@ -22,11 +22,11 @@ namespace PoSMidterm
             Tax = SubTotal * .06;
             GrandTotal = Tax + SubTotal;
         }
-        public void DisplayTotal(Total t)
+        public void DisplayTotal()
         {
-            Console.WriteLine("Subtotal: " + t.SubTotal);
-            Console.WriteLine("Tax: " + t.Tax);
-            Console.WriteLine("Grand Total: " + t.GrandTotal);
+            Console.WriteLine("Subtotal: " + SubTotal);
+            Console.WriteLine("Tax: " + Tax);
+            Console.WriteLine("Grand Total: " + GrandTotal);
         }
     }
 }
