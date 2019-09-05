@@ -47,28 +47,51 @@ namespace PoSMidterm
             Console.WriteLine("Description: " + Products[index - 1].Description);
             Console.WriteLine("Price: " + Products[index - 1].Price.ToString("C", CultureInfo.CurrentCulture));
 
-            while (true)
+            bool isAdd = true;
+
+            do
             {
-            Console.Write("\nWould you like to add " + Products[index - 1].Name + " to your cart? (y/n): ");
-            string answer = Console.ReadLine().Trim().ToLower();
+                Console.Write("\nWould you like to add " + Products[index - 1].Name + " to your cart? (y/n): ");
+                string answer = Console.ReadLine().Trim().ToLower();
 
                 if (answer == "y")
                 {
-                    Console.Write("How many would you like to add?: ");
-                    Products[index - 1].Quantity = int.Parse(Console.ReadLine());
+                    bool isNum = true;
 
-                    ShoppingCart.Add(Products[index - 1]);
-                    break;
+                    do
+                    {
+                        Console.Write("How many would you like to add? (enter a number): ");
+                        int answerQuantity = int.Parse(Console.ReadLine().Trim());
+
+
+                        if (answerQuantity >= 1 && answerQuantity <= 100)
+                        {
+                            Products[index - 1].Quantity = answerQuantity;
+                            //Products[index - 1].Quantity = int.Parse(Console.ReadLine().Trim());
+
+                            ShoppingCart.Add(Products[index - 1]);
+                            isNum = true;
+                        }
+
+                        else
+                        {
+                            isNum = false;
+                            Console.WriteLine("Invalid input. Please try again.");
+                        }
+                    } while (isNum == false);
+
+                    isAdd = true;
                 }
                 else if (answer == "n")
                 {
-                    break;
+                    isAdd = true;
                 }
                 else
                 {
-                    Console.WriteLine("I'm sorry I didn't understand that. Please answer again. (y/n)");
+                    Console.WriteLine("Invalid input. Please try again.");
+                    isAdd = false;
                 }
-            }
+            } while (isAdd == false);
         }
 
         public void DisplayShoppingCart(List<Product> ShoppingCart)
