@@ -40,21 +40,19 @@ namespace PoSMidterm
         {
             Console.Write("\nWhat would you like to buy? (enter 1 - 12): ");
             int index = int.Parse(Console.ReadLine());
-
+          
             Console.WriteLine("\nName: " + Products[index - 1].Name);
             Console.WriteLine("Category: " + Products[index - 1].Category);
             Console.WriteLine("Description: " + Products[index - 1].Description);
             Console.WriteLine("Price: " + Products[index - 1].Price.ToString("C", CultureInfo.CurrentCulture));
-            Console.WriteLine();
-            Console.Write("You would like " + Products[index - 1].Name + "? (y/n): ");
-            string answer = Console.ReadLine().Trim().ToLower();
 
+            Console.Write("\nYou would like " + Products[index - 1].Name + "? (y/n): ");
+            string answer = Console.ReadLine().Trim().ToLower();
 
             while (true)
             {
                 if (answer == "y")
                 {
-
                     Console.Write("How many would you like?: ");
                     Products[index - 1].Quantity = int.Parse(Console.ReadLine());
 
