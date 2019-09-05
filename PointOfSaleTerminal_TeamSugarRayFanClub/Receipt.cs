@@ -6,7 +6,6 @@ namespace PoSMidterm
 {
     class Receipt
     {
-        Total t = new Total();
         public void PaymentMenu()
         {
             Console.WriteLine("\nPayment Options:");
