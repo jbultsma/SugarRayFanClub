@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace PoSMidterm
@@ -24,9 +25,9 @@ namespace PoSMidterm
         }
         public void DisplayTotal()
         {
-            Console.WriteLine("Subtotal: " + SubTotal);
-            Console.WriteLine("Tax: " + Tax);
-            Console.WriteLine("Grand Total: " + GrandTotal);
+            Console.WriteLine("Subtotal: " + SubTotal.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine("Tax: " + Tax.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine("Grand Total: " + GrandTotal.ToString("C", CultureInfo.CurrentCulture));
         }
     }
 }
