@@ -9,6 +9,7 @@ namespace PoSMidterm
     {
         Cart c = new Cart();
         Receipt r = new Receipt();
+        Total t = new Total();
 
         public void Intro()
         {
@@ -23,25 +24,31 @@ namespace PoSMidterm
             {
                 c.DisplayMenu();
                 c.AddToCartDB(c.Products, c.ShoppingCart);
-                Console.WriteLine("Would you like to buy another item? (y/n)");
+                Console.Write("Would you like to buy another item? (y/n): ");
                 string input = Console.ReadLine().ToLower().Trim();
                 //Console.Clear();
 
                 if (input == "y")
                 {
+                    Console.WriteLine();
                     isBuyAgain = true;
                 }
                 else
                 {
                     isBuyAgain = false;
-                    c.DisplayShoppingCart(c.ShoppingCart);
                 }
             }
             while (isBuyAgain == true);
 
+            c.DisplayShoppingCart(c.ShoppingCart);
+
+            Console.WriteLine();
+            t.SetTotal(c.ShoppingCart);
+            t.DisplayTotal();
+            Console.WriteLine();
+
+            r.PaymentMenu();
+
         }
-
-
-
     }
 }

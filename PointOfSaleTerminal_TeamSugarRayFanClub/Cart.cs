@@ -38,22 +38,22 @@ namespace PoSMidterm
 
         public void AddToCartDB(List<Product> Products, List<Product> ShoppingCart)
         {
-            Console.WriteLine("What would you like to buy? (enter 1 - 12)");
+            Console.Write("\nWhat would you like to buy? (enter 1 - 12): ");
             int index = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Name: " + Products[index - 1].Name);
+          
+            Console.WriteLine("\nName: " + Products[index - 1].Name);
             Console.WriteLine("Category: " + Products[index - 1].Category);
             Console.WriteLine("Description: " + Products[index - 1].Description);
             Console.WriteLine("Price: " + Products[index - 1].Price.ToString("C", CultureInfo.CurrentCulture));
-            Console.WriteLine();
+
+            Console.Write("\nYou would like " + Products[index - 1].Name + "? (y/n): ");
+            string answer = Console.ReadLine().Trim().ToLower();
 
             while (true)
             {
-            Console.WriteLine("You would like " + Products[index - 1].Name + "? (y/n)");
-            string answer = Console.ReadLine().Trim().ToLower();
                 if (answer == "y")
                 {
-                    Console.WriteLine("How many would you like?");
+                    Console.Write("How many would you like?: ");
                     Products[index - 1].Quantity = int.Parse(Console.ReadLine());
 
                     ShoppingCart.Add(Products[index - 1]);
@@ -73,10 +73,13 @@ namespace PoSMidterm
         public void DisplayShoppingCart(List<Product> ShoppingCart)
         {
             Console.WriteLine("Items in cart: ");
+            Console.WriteLine("-".PadRight(100,'-'));
+            Console.WriteLine("Name: ".PadRight(25) + "Price: ".PadLeft(12).PadRight(25) + "Quantity: ".PadRight(25));
+            Console.WriteLine();
 
             foreach (Product item in ShoppingCart)
             {
-                Console.WriteLine("Name: " + item.Name.PadRight(25) + "Price: " + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + "Quantity: " + item.Quantity);
+                Console.WriteLine(item.Name.PadRight(25) + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + item.Quantity);
             }
         }
     }

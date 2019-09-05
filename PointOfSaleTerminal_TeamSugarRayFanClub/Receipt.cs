@@ -6,13 +6,13 @@ namespace PoSMidterm
 {
     class Receipt
     {
-        Total t = new Total();
         public void PaymentMenu()
         {
-            Console.WriteLine("Select your payment type: ");
-            Console.WriteLine("1.) Cash");
-            Console.WriteLine("2.) Check");
-            Console.WriteLine("3.) Credit Card");
+            Console.WriteLine("\nPayment Options:");
+            Console.WriteLine("\t1.) Cash");
+            Console.WriteLine("\t2.) Check");
+            Console.WriteLine("\t3.) Credit Card");
+            Console.Write("Please select your preffered method of payment: ");
 
             int input = int.Parse(Console.ReadLine());
             PaymentTypeView pv = new PaymentTypeView();
