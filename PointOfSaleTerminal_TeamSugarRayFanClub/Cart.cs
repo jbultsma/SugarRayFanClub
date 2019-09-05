@@ -49,8 +49,8 @@ namespace PoSMidterm
 
             while (true)
             {
-            Console.WriteLine("You would like " + Products[index - 1].Name + "? (y/n)");
-            string answer = Console.ReadLine().Trim().ToLower();
+                Console.WriteLine("You would like " + Products[index - 1].Name + "? (y/n)");
+                string answer = Console.ReadLine().Trim().ToLower();
                 if (answer == "y")
                 {
                     Console.WriteLine("How many would you like?");
@@ -73,10 +73,13 @@ namespace PoSMidterm
         public void DisplayShoppingCart(List<Product> ShoppingCart)
         {
             Console.WriteLine("Items in cart: ");
+            Console.WriteLine("-".PadRight(100,'-'));
+            Console.WriteLine("Name: ".PadRight(25) + "Price: ".PadLeft(12).PadRight(25) + "Quantity: ".PadRight(25));
+            Console.WriteLine();
 
             foreach (Product item in ShoppingCart)
             {
-                Console.WriteLine("Name: " + item.Name.PadRight(25) + "Price: " + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + "Quantity: " + item.Quantity);
+                Console.WriteLine(item.Name.PadRight(25) + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + item.Quantity);
             }
         }
     }
