@@ -14,20 +14,28 @@ namespace PoSMidterm
         public void Intro()
         {
             bool isRunAgain = true, isEndLoop = true;
+            int num = 0;
 
             do
             {
+                c.ShoppingCart.Clear();
+
+                num++;
+                if (num > 1)
+                {
+                    c.DisplayHistoryCart(c.History);
+                }
+
                 bool isBuyAgain = false;
 
                 Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
                 Console.WriteLine("Here you can buy all things Sugar Ray");
                 Console.WriteLine("It's pretty cool");
                 Console.WriteLine("Below you can find a list of things to pay to fill all of your Sugar Ray needs!\n");
-
                 do
                 {
                     c.DisplayMenu();
-                    c.AddToCartDB(c.Products, c.ShoppingCart);
+                    c.AddToCartDB(c.Products, c.ShoppingCart, c.History);
 
                     bool isInvalidInput = true;
 
