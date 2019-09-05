@@ -7,10 +7,10 @@ namespace PoSMidterm
     class PaymentTypeView
     {
         // Create instance of Payment Type to access properties & an instance of Total to access properties
-        public Total T = new Total();
+        // public Total T = new Total();
 
         // Create a display method for each payment type
-        public void DisplayCash()
+        public void DisplayCash(Total T)
         {
             Console.WriteLine("Enter cash value to be tendered: ");
             double cashValue = double.Parse(Console.ReadLine());
@@ -20,7 +20,7 @@ namespace PoSMidterm
             Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal));
         }
 
-        public void DisplayCheck()
+        public void DisplayCheck(Total T)
         {
             Console.WriteLine("Please enter a check number.");
             int checkNumber = int.Parse(Console.ReadLine());
@@ -30,7 +30,7 @@ namespace PoSMidterm
             Console.WriteLine("Amount Tendered: " + T.GrandTotal);
         }
 
-        public void DisplayCreditCard()
+        public void DisplayCreditCard(Total T)
         {
             Console.WriteLine("Please enter a credit card number.");
             string creditCardNum = Console.ReadLine();

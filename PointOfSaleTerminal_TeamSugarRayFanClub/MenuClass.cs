@@ -47,7 +47,7 @@ namespace PoSMidterm
             t.DisplayTotal();
             Console.WriteLine();
 
-            r.PaymentMenu();
+            r.PaymentMenu(t);
 
         }
     }
