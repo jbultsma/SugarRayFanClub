@@ -46,11 +46,11 @@ namespace PoSMidterm
             Console.WriteLine("Description: " + Products[index - 1].Description);
             Console.WriteLine("Price: " + Products[index - 1].Price.ToString("C", CultureInfo.CurrentCulture));
 
+            while (true)
+            {
             Console.Write("\nYou would like " + Products[index - 1].Name + "? (y/n): ");
             string answer = Console.ReadLine().Trim().ToLower();
 
-            while (true)
-            {
                 if (answer == "y")
                 {
                     Console.Write("How many would you like?: ");

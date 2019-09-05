@@ -6,7 +6,7 @@ namespace PoSMidterm
 {
     class Receipt
     {
-        public void PaymentMenu()
+        public void PaymentMenu(Total t)
         {
             Console.WriteLine("\nPayment Options:");
             Console.WriteLine("\t1.) Cash");
@@ -18,15 +18,15 @@ namespace PoSMidterm
             PaymentTypeView pv = new PaymentTypeView();
             if (input == 1)
             {
-                pv.DisplayCash();
+                pv.DisplayCash(t);
             }
             else if (input == 2)
             {
-                pv.DisplayCheck();
+                pv.DisplayCheck(t);
             }
             else if (input == 3)
             {
-                pv.DisplayCreditCard();
+                pv.DisplayCreditCard(t);
             }
         }
     }
