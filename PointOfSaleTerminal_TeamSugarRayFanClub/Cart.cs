@@ -37,7 +37,7 @@ namespace PoSMidterm
             }
         }
 
-        public void AddToCartDB(List<Product> Products, List<Product> ShoppingCart)
+        public void AddToCartDB(List<Product> Products, List<Product> ShoppingCart, List<Product> History)
         {
             Console.Write("\nWhat would you like to buy? (enter 1 - 12): ");
             int index = int.Parse(Console.ReadLine());
@@ -70,6 +70,7 @@ namespace PoSMidterm
                             //Products[index - 1].Quantity = int.Parse(Console.ReadLine().Trim());
 
                             ShoppingCart.Add(Products[index - 1]);
+                            History.Add(Products[index - 1]);
                             isNum = true;
                         }
 
@@ -105,6 +106,21 @@ namespace PoSMidterm
             {
                 Console.WriteLine(item.Name.PadRight(25) + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + item.Quantity);
             }
+        }
+
+        public void DisplayHistoryCart(List<Product> History)
+        {
+            Console.WriteLine("\nPrevious Purchases");
+            Console.WriteLine("-".PadRight(100,'-'));
+            Console.WriteLine("Name: ".PadRight(25) + "Price: ".PadLeft(12).PadRight(25) + "Quantity: ".PadRight(25));
+
+            foreach (Product item in History)
+            {
+                Console.WriteLine(item.Name.PadRight(25) + item.Price.ToString("C", CultureInfo.CurrentCulture).PadLeft(10).PadRight(25) + item.Quantity);
+            }
+
+            Console.WriteLine("-".PadRight(100, '-'));
+            Console.WriteLine();
         }
     }
 }

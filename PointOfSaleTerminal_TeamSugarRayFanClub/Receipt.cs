@@ -18,7 +18,7 @@ namespace PoSMidterm
 
             do
             {
-                Console.Write("\nPlease select your preffered method of payment (1-3): ");
+                Console.Write("\nPlease select your preferred method of payment (1-3): ");
 
                 int input = int.Parse(Console.ReadLine());
                 PaymentTypeView pv = new PaymentTypeView();

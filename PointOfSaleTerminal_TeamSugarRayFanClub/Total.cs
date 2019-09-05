@@ -16,6 +16,7 @@ namespace PoSMidterm
         }
         public void SetTotal(List<Product> x)
         {
+            SubTotal = 0;
             foreach (Product p in x)
             {
                 SubTotal += (p.Price * p.Quantity);
