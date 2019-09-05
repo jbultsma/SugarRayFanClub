@@ -6,28 +6,45 @@ namespace PoSMidterm
 {
     class Receipt
     {
-        public void PaymentMenu()
+        public void PaymentMenu(Total t)
         {
-            Console.WriteLine("\nPayment Options:");
-            Console.WriteLine("\t1.) Cash");
-            Console.WriteLine("\t2.) Check");
-            Console.WriteLine("\t3.) Credit Card");
-            Console.Write("Please select your preffered method of payment: ");
+            Console.WriteLine("Payment Options");
+            Console.WriteLine("-".PadRight(100, '-'));
+            Console.WriteLine("1.) Cash");
+            Console.WriteLine("2.) Check");
+            Console.WriteLine("3.) Credit Card");
 
-            int input = int.Parse(Console.ReadLine());
-            PaymentTypeView pv = new PaymentTypeView();
-            if (input == 1)
+            bool isPaymentOption = true;
+
+            do
             {
-                pv.DisplayCash();
-            }
-            else if (input == 2)
-            {
-                pv.DisplayCheck();
-            }
-            else if (input == 3)
-            {
-                pv.DisplayCreditCard();
-            }
+                Console.Write("\nPlease select your preffered method of payment (1-3): ");
+
+                int input = int.Parse(Console.ReadLine());
+                PaymentTypeView pv = new PaymentTypeView();
+                if (input == 1)
+                {
+                    pv.DisplayCash(t);
+                    isPaymentOption = true;
+                }
+                else if (input == 2)
+                {
+                    pv.DisplayCheck(t);
+                    isPaymentOption = true;
+                }
+                else if (input == 3)
+                {
+                    pv.DisplayCreditCard(t);
+                    isPaymentOption = true;
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid input. Please try again.");
+                    isPaymentOption = false;
+                }
+            } while (isPaymentOption == false);
+            Console.WriteLine("-".PadRight(100, '-'));
         }
     }
 }

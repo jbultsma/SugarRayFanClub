@@ -9,6 +9,7 @@ namespace PoSMidterm
     {
         public List<Product> Products = new List<Product>();
         public List<Product> ShoppingCart = new List<Product>();
+        public List<Product> History = new List<Product>();
 
         public Cart()
         {
@@ -18,8 +19,8 @@ namespace PoSMidterm
             Products.Add(new Product("Greatest Hits", "Vinyl", "The best of Sugar Ray on one album!!!", 35));
             Products.Add(new Product("Scooby Doo The Movie", "DVD", "Sugar Ray makes a star appearance in this movie", 20));
             Products.Add(new Product("Hair Gel", "Cosmetic Product", "Thick gel perfect for spiking hair. Recommended for frosted tips.", 3.5));
-            Products.Add(new Product("T-Shirt", "Merchandise", "Collectable T-Shirt that will probably be worth and exponential amount in a decade.", 12));
-            Products.Add(new Product("T-Shirt", "Merchandise", "A less desirable design of T-Shirt. Won't be worth anything in a few years", 12));
+            Products.Add(new Product("T-Shirt 1", "Merchandise", "Collectable T-Shirt that will probably be worth and exponential amount in a decade.", 12));
+            Products.Add(new Product("T-Shirt 2", "Merchandise", "A less desirable design of T-Shirt. Won't be worth anything in a few years", 12));
             Products.Add(new Product("Long Sleeve", "Merchandise", "A long sleeve shirt with Sugar Ray's logo. No one wears long sleeves so they're on sale.", 10));
             Products.Add(new Product("Coffee Mug", "Merchandise", "The perfect vessel for a warm beverage", 5.5));
             Products.Add(new Product("Sun Glasses", "Merchandise", "Helps block UV rays from your eyes and makes you look cool.", 10));
@@ -46,33 +47,56 @@ namespace PoSMidterm
             Console.WriteLine("Description: " + Products[index - 1].Description);
             Console.WriteLine("Price: " + Products[index - 1].Price.ToString("C", CultureInfo.CurrentCulture));
 
-            Console.Write("\nYou would like " + Products[index - 1].Name + "? (y/n): ");
-            string answer = Console.ReadLine().Trim().ToLower();
+            bool isAdd = true;
 
-            while (true)
+            do
             {
+                Console.Write("\nWould you like to add " + Products[index - 1].Name + " to your cart? (y/n): ");
+                string answer = Console.ReadLine().Trim().ToLower();
+
                 if (answer == "y")
                 {
-                    Console.Write("How many would you like?: ");
-                    Products[index - 1].Quantity = int.Parse(Console.ReadLine());
+                    bool isNum = true;
 
-                    ShoppingCart.Add(Products[index - 1]);
-                    break;
+                    do
+                    {
+                        Console.Write("How many would you like to add? (enter a number): ");
+                        int answerQuantity = int.Parse(Console.ReadLine().Trim());
+
+
+                        if (answerQuantity >= 1 && answerQuantity <= 100)
+                        {
+                            Products[index - 1].Quantity = answerQuantity;
+                            //Products[index - 1].Quantity = int.Parse(Console.ReadLine().Trim());
+
+                            ShoppingCart.Add(Products[index - 1]);
+                            isNum = true;
+                        }
+
+                        else
+                        {
+                            isNum = false;
+                            Console.WriteLine("Invalid input. Please try again.");
+                        }
+                    } while (isNum == false);
+
+                    isAdd = true;
                 }
                 else if (answer == "n")
                 {
-                    break;
+                    isAdd = true;
                 }
                 else
                 {
-                    Console.WriteLine("I'm sorry I didn't understand that. Please answer again. (y/n)");
+                    Console.WriteLine("Invalid input. Please try again.");
+                    isAdd = false;
                 }
-            }
+            } while (isAdd == false);
         }
 
         public void DisplayShoppingCart(List<Product> ShoppingCart)
         {
-            Console.WriteLine("Items in cart: ");
+            Console.WriteLine("\nItems in cart");
             Console.WriteLine("-".PadRight(100,'-'));
             Console.WriteLine("Name: ".PadRight(25) + "Price: ".PadLeft(12).PadRight(25) + "Quantity: ".PadRight(25));
             Console.WriteLine();

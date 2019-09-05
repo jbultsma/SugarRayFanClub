@@ -13,42 +13,91 @@ namespace PoSMidterm
 
         public void Intro()
         {
-            bool isBuyAgain = false;
-            Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
-            Console.WriteLine("Here you can buy all things Sugar Ray");
-            Console.WriteLine("It's pretty cool");
-            Console.WriteLine("Below you can find a list of things to pay to fill all of your Sugar Ray needs!");
-            Console.WriteLine();
+            bool isRunAgain = true, isEndLoop = true;
 
             do
             {
-                c.DisplayMenu();
-                c.AddToCartDB(c.Products, c.ShoppingCart);
-                Console.Write("Would you like to buy another item? (y/n): ");
-                string input = Console.ReadLine().ToLower().Trim();
-                //Console.Clear();
+                bool isBuyAgain = false;
 
-                if (input == "y")
+                Console.WriteLine("Hello!, Welcome to the Sugar Ray Fan Club Merch Store!");
+                Console.WriteLine("Here you can buy all things Sugar Ray");
+                Console.WriteLine("It's pretty cool");
+                Console.WriteLine("Below you can find a list of things to pay to fill all of your Sugar Ray needs!\n");
+
+                do
                 {
-                    Console.WriteLine();
-                    isBuyAgain = true;
-                }
-                else
+                    c.DisplayMenu();
+                    c.AddToCartDB(c.Products, c.ShoppingCart);
+
+                    bool isInvalidInput = true;
+
+                    do
+                    {
+                        Console.Write("Would you like to add another item to your cart? (y/n): ");
+                        string input = Console.ReadLine().ToLower().Trim();                        
+
+                        if (input == "y")
+                        {
+                            Console.Clear();
+                            Console.WriteLine();
+                            isBuyAgain = true;
+                            isInvalidInput = true;
+                        }
+
+                        else if (input == "n")
+                        {
+                            Console.Clear();
+                            Console.WriteLine();
+                            isBuyAgain = false;
+                            isInvalidInput = true;
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Invalid input. Please try again.\n");
+                            isInvalidInput = false;
+                        }
+                    } while (isInvalidInput == false);
+                }   while (isBuyAgain == true);
+
+                c.DisplayShoppingCart(c.ShoppingCart);
+
+                Console.WriteLine();
+                t.SetTotal(c.ShoppingCart);
+                t.DisplayTotal();
+                Console.WriteLine();
+
+                r.PaymentMenu(t);
+
+                do
                 {
-                    isBuyAgain = false;
-                }
-            }
-            while (isBuyAgain == true);
+                    Console.Write("Would you like to make another transaction? (y/n): ");
+                    string answer2 = Console.ReadLine().ToLower().Trim();
 
-            c.DisplayShoppingCart(c.ShoppingCart);
+                    if (answer2 == "y")
+                    {
+                        isRunAgain = true;
+                        isEndLoop = true;
+                        Console.Clear();
+                    }
 
-            Console.WriteLine();
-            t.SetTotal(c.ShoppingCart);
-            t.DisplayTotal();
-            Console.WriteLine();
+                    else if (answer2 == "n")
+                    {
+                        isRunAgain = false;
+                        isEndLoop = true;
+                        Console.Clear();
+                        Console.WriteLine("Thank you for shopping at the Sugar Ray Fan Club Merch Store!");
+                        Console.WriteLine("\nYou have pleased Mark McGrath by your contribution.\n");
+                    }
 
-            r.PaymentMenu();
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please try again.");
+                        isEndLoop = false;
+                    }
+                } while (isEndLoop == false);
 
+            }   while (isRunAgain == true);
         }
     }
 }
