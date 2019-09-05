@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace PoSMidterm
 {
@@ -16,8 +17,8 @@ namespace PoSMidterm
             double cashValue = double.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(cashValue);
             Console.WriteLine("Payment Type: Cash");
-            Console.WriteLine("Cash Value Tendered: " + pt.CashValue);
-            Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal));
+            Console.WriteLine("Cash Value Tendered: " + pt.CashValue.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal).ToString("C", CultureInfo.CurrentCulture));
         }
 
         public void DisplayCheck(Total T)
@@ -27,7 +28,7 @@ namespace PoSMidterm
             PaymentType pt = new PaymentType(checkNumber);
             Console.WriteLine("Payment Type: Check");
             Console.WriteLine("Check number: " + pt.CheckNumber);
-            Console.WriteLine("Amount Tendered: " + T.GrandTotal);
+            Console.WriteLine("Amount Tendered: " + T.GrandTotal.ToString("C", CultureInfo.CurrentCulture));
         }
 
         public void DisplayCreditCard(Total T)
@@ -45,7 +46,7 @@ namespace PoSMidterm
             Console.WriteLine("Credit Card Number: " + pt.CreditCardNum);
             Console.WriteLine("Credit Card Expiration Month/Year: " + pt.ExpiryMonth + "/" + pt.ExpiryYear);
             Console.WriteLine("Credit Card CVV: " + pt.CreditCardCVV);
-            Console.WriteLine("Amount Tendered: " + T.GrandTotal);
+            Console.WriteLine("Amount Tendered: " + T.GrandTotal.ToString("C", CultureInfo.CurrentCulture));
         }
     }
 }
