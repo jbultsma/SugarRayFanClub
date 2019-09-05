@@ -60,15 +60,13 @@ namespace PoSMidterm
 
                     do
                     {
-                        Console.Write("How many would you like to add? (enter a number): ");
+                        Console.Write("How many would you like to add? (enter a number, the max quantiy you may purchase is 100): ");
                         int answerQuantity = int.Parse(Console.ReadLine().Trim());
 
 
                         if (answerQuantity >= 1 && answerQuantity <= 100)
                         {
                             Products[index - 1].Quantity = answerQuantity;
-                            //Products[index - 1].Quantity = int.Parse(Console.ReadLine().Trim());
-
                             ShoppingCart.Add(Products[index - 1]);
                             History.Add(Products[index - 1]);
                             isNum = true;
