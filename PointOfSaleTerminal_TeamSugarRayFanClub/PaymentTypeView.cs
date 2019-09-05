@@ -13,36 +13,38 @@ namespace PoSMidterm
         // Create a display method for each payment type
         public void DisplayCash(Total T)
         {
-            Console.WriteLine("Enter cash value to be tendered: ");
+            Console.Write("\nEnter cash value to be tendered: ");
             double cashValue = double.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(cashValue);
-            Console.WriteLine("Payment Type: Cash");
+
+            Console.WriteLine("\nPayment Type: Cash");
+
             Console.WriteLine("Cash Value Tendered: " + pt.CashValue.ToString("C", CultureInfo.CurrentCulture));
             Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal).ToString("C", CultureInfo.CurrentCulture));
         }
 
         public void DisplayCheck(Total T)
         {
-            Console.WriteLine("Please enter a check number.");
+            Console.Write("\nPlease enter a check number: ");
             int checkNumber = int.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(checkNumber);
-            Console.WriteLine("Payment Type: Check");
+            Console.WriteLine("\nPayment Type: Check");
             Console.WriteLine("Check number: " + pt.CheckNumber);
             Console.WriteLine("Amount Tendered: " + T.GrandTotal.ToString("C", CultureInfo.CurrentCulture));
         }
 
         public void DisplayCreditCard(Total T)
         {
-            Console.WriteLine("Please enter a credit card number.");
+            Console.Write("\nPlease enter a credit card number: ");
             string creditCardNum = Console.ReadLine();
-            Console.WriteLine("Enter credit card expiration month (MM).");
+            Console.Write("Enter credit card expiration month (MM): ");
             string expiryMonth = Console.ReadLine();
-            Console.WriteLine("Enter credit card expiration year (YYYY).");
+            Console.Write("Enter credit card expiration year (YYYY): ");
             string expiryYear = Console.ReadLine();
-            Console.WriteLine("Enter credit card security code (CVV).");
+            Console.Write("Enter credit card security code (CVV): ");
             int creditCardCVV = int.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(creditCardNum, expiryMonth, expiryYear, creditCardCVV);
-            Console.WriteLine("Payment Type: Credit Card");
+            Console.WriteLine("\nPayment Type: Credit Card");
             Console.WriteLine("Credit Card Number: " + pt.CreditCardNum);
             Console.WriteLine("Credit Card Expiration Month/Year: " + pt.ExpiryMonth + "/" + pt.ExpiryYear);
             Console.WriteLine("Credit Card CVV: " + pt.CreditCardCVV);
