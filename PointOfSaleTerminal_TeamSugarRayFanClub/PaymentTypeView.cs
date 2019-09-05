@@ -15,6 +15,20 @@ namespace PoSMidterm
         {
             Console.Write("\nEnter cash value to be tendered: ");
             double cashValue = double.Parse(Console.ReadLine());
+
+            while (true)
+            {
+                if (cashValue < T.GrandTotal)
+                {
+                    Console.WriteLine("The amount paid was not sufficient to cover the cost. Please try again.");
+                    cashValue = double.Parse(Console.ReadLine());
+                }
+                else
+                {
+                    break;
+                }
+            }
+
             PaymentType pt = new PaymentType(cashValue);
             Console.WriteLine("\nPayment Type: Cash");
             Console.WriteLine("Cash Value Tendered: " + pt.CashValue.ToString("C", CultureInfo.CurrentCulture));
