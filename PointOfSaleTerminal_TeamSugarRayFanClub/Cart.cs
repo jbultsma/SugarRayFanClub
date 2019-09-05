@@ -9,6 +9,7 @@ namespace PoSMidterm
     {
         public List<Product> Products = new List<Product>();
         public List<Product> ShoppingCart = new List<Product>();
+        public List<Product> History = new List<Product>();
 
         public Cart()
         {
@@ -18,8 +19,8 @@ namespace PoSMidterm
             Products.Add(new Product("Greatest Hits", "Vinyl", "The best of Sugar Ray on one album!!!", 35));
             Products.Add(new Product("Scooby Doo The Movie", "DVD", "Sugar Ray makes a star appearance in this movie", 20));
             Products.Add(new Product("Hair Gel", "Cosmetic Product", "Thick gel perfect for spiking hair. Recommended for frosted tips.", 3.5));
-            Products.Add(new Product("T-Shirt", "Merchandise", "Collectable T-Shirt that will probably be worth and exponential amount in a decade.", 12));
-            Products.Add(new Product("T-Shirt", "Merchandise", "A less desirable design of T-Shirt. Won't be worth anything in a few years", 12));
+            Products.Add(new Product("T-Shirt 1", "Merchandise", "Collectable T-Shirt that will probably be worth and exponential amount in a decade.", 12));
+            Products.Add(new Product("T-Shirt 2", "Merchandise", "A less desirable design of T-Shirt. Won't be worth anything in a few years", 12));
             Products.Add(new Product("Long Sleeve", "Merchandise", "A long sleeve shirt with Sugar Ray's logo. No one wears long sleeves so they're on sale.", 10));
             Products.Add(new Product("Coffee Mug", "Merchandise", "The perfect vessel for a warm beverage", 5.5));
             Products.Add(new Product("Sun Glasses", "Merchandise", "Helps block UV rays from your eyes and makes you look cool.", 10));
