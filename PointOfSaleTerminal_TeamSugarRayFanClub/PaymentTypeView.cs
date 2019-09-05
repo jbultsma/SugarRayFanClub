@@ -16,7 +16,9 @@ namespace PoSMidterm
             Console.Write("\nEnter cash value to be tendered: ");
             double cashValue = double.Parse(Console.ReadLine());
             PaymentType pt = new PaymentType(cashValue);
+
             Console.WriteLine("\nPayment Type: Cash");
+
             Console.WriteLine("Cash Value Tendered: " + pt.CashValue.ToString("C", CultureInfo.CurrentCulture));
             Console.WriteLine("Change: " + (pt.CashValue - T.GrandTotal).ToString("C", CultureInfo.CurrentCulture));
         }
