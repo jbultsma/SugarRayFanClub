@@ -27,7 +27,8 @@ namespace PoSMidterm
         {
             Console.WriteLine("Subtotal: " + SubTotal.ToString("C", CultureInfo.CurrentCulture));
             Console.WriteLine("Tax: " + Tax.ToString("C", CultureInfo.CurrentCulture));
-            Console.WriteLine("Grand Total: " + GrandTotal.ToString("C", CultureInfo.CurrentCulture));
+            Console.WriteLine("Grand Total: " + GrandTotal.ToString("C", CultureInfo.CurrentCulture));            
+            Console.WriteLine("-".PadRight(100, '-'));
         }
     }
 }

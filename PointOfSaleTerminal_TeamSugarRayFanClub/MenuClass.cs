@@ -24,7 +24,7 @@ namespace PoSMidterm
             {
                 c.DisplayMenu();
                 c.AddToCartDB(c.Products, c.ShoppingCart);
-                Console.Write("Would you like to buy another item? (y/n): ");
+                Console.Write("Would you like to add another item to your cart? (y/n): ");
                 string input = Console.ReadLine().ToLower().Trim();
                 //Console.Clear();
 
